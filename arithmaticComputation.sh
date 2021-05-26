@@ -20,4 +20,8 @@ dict[$i]=$y
 i=$(($i+1))
 dict[$i]=$z
 echo "Values in dictionary : ${dict[@]}"
-
+for((i=0;i<=3;i++))
+do
+	a[$i]=${dict[$i]}
+done
+echo "Values in array : ${a[@]}"
