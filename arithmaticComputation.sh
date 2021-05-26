@@ -1,5 +1,7 @@
 #!/bin/bash -x
 declare -A dict
+declare -a arr
+declare -a array
 read -p "Enter 1st input : " a
 read -p "Enter 2nd input : " b
 read -p "Enter 3rd input : " c
@@ -22,6 +24,8 @@ dict[$i]=$z
 echo "Values in dictionary : ${dict[@]}"
 for((i=0;i<=3;i++))
 do
-	a[$i]=${dict[$i]}
+	arr[$i]=${dict[$i]}
 done
-echo "Values in array : ${a[@]}"
+echo "Values in array : ${arr[@]}"
+array=($(echo ${arr[@]} | tr " " "\n" | sort -nr ))
+echo "Array in descending order : ${array[@]}"
