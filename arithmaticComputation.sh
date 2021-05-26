@@ -29,3 +29,5 @@ done
 echo "Values in array : ${arr[@]}"
 array=($(echo ${arr[@]} | tr " " "\n" | sort -nr ))
 echo "Array in descending order : ${array[@]}"
+array=($(echo ${arr[@]} | tr " " "\n" | sort -n ))
+echo "Array in Ascending order : ${array[@]}"
