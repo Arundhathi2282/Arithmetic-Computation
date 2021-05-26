@@ -5,6 +5,8 @@ read -p "Enter 3rd input : " c
 w=`awk 'BEGIN{print '$a' + '$b' * '$c' }'`
 x=`awk 'BEGIN{print '$a' * '$b' + '$c' }'`
 y=`awk 'BEGIN{print '$c' + '$a' / '$b' }'`
+z=`awk 'BEGIN{print '$a' % '$b' + '$c' }'`
 echo "First expression output : $w"
 echo "Second expression output : $x"
-echo "Third expression output : " $y
+echo "Third expression output : $y"
+echo "Fourth expression output : $z"
